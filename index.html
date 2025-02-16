@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA - RFC y API REST</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-purple-500 to-indigo-500 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-3xl p-8 bg-white shadow-2xl rounded-lg">
+        <h2 class="text-3xl font-bold text-center mb-6 text-gray-800">Generador de RFC & Consulta API</h2>
+        
+        <div class="flex flex-col md:flex-row gap-6">
+            <!-- Formulario RFC -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg flex-1">
+                <h3 class="text-xl font-semibold mb-4 text-gray-700">Generar RFC</h3>
+                <label class="block font-medium">Nombre:</label>
+                <input type="text" id="nombre" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                
+                <label class="block mt-3 font-medium">Apellido Paterno:</label>
+                <input type="text" id="apellidoPaterno" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                
+                <label class="block mt-3 font-medium">Apellido Materno:</label>
+                <input type="text" id="apellidoMaterno" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                
+                <label class="block mt-3 font-medium">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                
+                <button id="generarRFC" class="mt-5 w-full bg-indigo-600 text-white p-3 rounded-lg hover:bg-indigo-700 transition">Generar RFC</button>
+                
+                <label class="block mt-5 font-medium">RFC Generado:</label>
+                <input type="text" id="resultadoRFC" class="w-full p-3 border rounded-lg bg-gray-300 text-gray-700" readonly>
+            </div>
+            
+            <!-- Formulario API REST -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg flex-1">
+                <h3 class="text-xl font-semibold mb-4 text-gray-700">Consulta API REST</h3>
+                <label class="block font-medium">ID del API:</label>
+                <input type="number" id="apiId" placeholder="Ingrese el ID" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+                
+                <button id="consultarAPI" class="mt-5 w-full bg-green-600 text-white p-3 rounded-lg hover:bg-green-700 transition">Consultar API</button>
+                
+                <label class="block mt-5 font-medium">Nombre:</label>
+                <input type="text" id="apiNombre" class="w-full p-3 border rounded-lg bg-gray-300 text-gray-700" readonly>
+                
+                <label class="block mt-3 font-medium">Email:</label>
+                <input type="text" id="apiEmail" class="w-full p-3 border rounded-lg bg-gray-300 text-gray-700" readonly>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
